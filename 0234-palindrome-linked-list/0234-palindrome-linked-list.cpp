@@ -13,12 +13,7 @@ public:
     bool isPalindrome(ListNode* head) {
         if(head == NULL || head->next == NULL)
     return true;
-        int len=0;
-        ListNode* temp=head;
-        while(temp!=NULL){
-            len++;
-            temp=temp->next;
-        }
+        
         ListNode* slow=head;
         ListNode* fast=head;
         while(fast->next!=NULL && fast->next->next!=NULL){
